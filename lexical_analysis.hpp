@@ -11,7 +11,8 @@ class LexicalAnalysis{
         CHAR,
         NOT,
         SEPARATE,
-        UNKNOWN
+        UNKNOWN,
+        EMPTY
     };
 
     struct Token{
