@@ -6,12 +6,26 @@
 using namespace std;
 
 class LexicalAnalysis{
+
+    enum class op_type{
+        CHAR,
+        NOT,
+        SEPARATE,
+        UNKNOWN
+    };
+
+    struct Token{
+        string op;
+        op_type type;
+    };
+
     public:
         // funcs
         void set(string rawFormula);
         string getRawString();
         vector<string> getSeparatedString();
         void separateRawString();
+
     private:
         // funcs
         void separate(string rawFormula);
