@@ -7,10 +7,10 @@
 using namespace std;
 
 
-int INT_A = static_cast<char>('A');
-int INT_Z = static_cast<char>('Z');
-int INT_NOT = static_cast<char>('^');
-int INT_SEPARATOR = static_cast<char>('+');
+int INT_A = static_cast<char>('A');         // 65
+int INT_Z = static_cast<char>('Z');         // 90
+int INT_NOT = static_cast<char>('^');       // 94
+int INT_SEPARATOR = static_cast<char>('+'); // 43
 
 
 // 生文字列セット
