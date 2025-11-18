@@ -7,8 +7,6 @@ using namespace std;
 
 class LexicalAnalysis{
 
-
-
     public:
         enum class op_type{
             CHAR,
