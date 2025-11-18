@@ -3,12 +3,13 @@
 #include<vector>
 
 #include "lexical_analysis.hpp"
+#include "utils.hpp"
 
 #define LA LexicalAnalysis
 
 using namespace std;
 
-// main.cpp の先頭あたりに追記
+
 const char* toString(LexicalAnalysis::op_type t){
     switch(t){
         case LexicalAnalysis::op_type::CHAR:     return "CHAR";
@@ -27,15 +28,15 @@ int main(void){
 
     LexicalAnalysis lex;
 
-    cout << "Please input Formula : " << endl;
+    cout << "Please input Formula : " << endl << endl;
     cin >> StringFormula;
+    cout << endl;
 
     lex.set(StringFormula);
     lex.lex();
     vector<LA::Token> tokenList = lex.getTokenList();
     for(int index = 0; index <= tokenList.size() - 1; index++){
-        cout << "[" << "\n" << "    op : " << tokenList[index].op << "\n"
-                            << "  type : " << toString(tokenList[index].type) << "\n"
-             << "]" << endl;
+        printToken(tokenList[index]);
+        cout << endl;
     }
 }

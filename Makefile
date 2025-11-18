@@ -2,7 +2,7 @@ CC = g++
 
 TARGET = Lex.out
 
-SRCS = main.cpp lexical_analysis.cpp
+SRCS = main.cpp lexical_analysis.cpp utils.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
